@@ -1,6 +1,6 @@
 pipeline {
   agent any
-  {
+  stages{
     stage('build docker image'){
         steps{
             sh 'docker build -t jenkinssachintestregistry.azurecr.io/test-flask-app .'
