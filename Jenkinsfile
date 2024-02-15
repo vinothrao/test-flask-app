@@ -3,7 +3,7 @@ pipeline {
   stages{
     stage('install docker'){
      steps{
-       sh 'sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin'
+       sh 'apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin'
      }
     }
     stage('build docker image'){
