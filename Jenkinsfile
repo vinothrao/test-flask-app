@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Run flaskapp'){
             steps{
-                sh 'python app.py'
+                sh 'python3 app.py'
             }
         }
         stage('Deploy') {
