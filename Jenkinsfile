@@ -5,6 +5,7 @@ pipeline {
             steps{
                 sh 'sudo apt-get update'
                 sh 'curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash'
+                sh "sudo apt-get install zip"
             }
         }
         stage('Install PIP'){
