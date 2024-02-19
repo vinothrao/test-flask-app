@@ -23,7 +23,7 @@ pipeline {
                                  ) {
                     sh 'az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID'                 
                     sh 'chmod +x ./deploy/az-webapp-create-py.sh'
-                    sh './deploy/az-webapp-create-py.sh -z . -b $BUILD_TAG'
+                    sh './az-webapp-create-py.sh -z . -b $BUILD_TAG'
                 }
             }
         }
