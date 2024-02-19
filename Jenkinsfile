@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Install PIP'){
             steps{
-                sh 'sudo apt-get install pip'
+                sh 'sudo apt-get install pip -y'
                 sh 'pip install -r requirements.txt'
             }
         }
