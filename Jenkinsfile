@@ -22,7 +22,7 @@ pipeline {
                                  string(credentialsId: 'AZURE_SUBSCRIPTION_ID', variable: 'AZURE_SUBSCRIPTION_ID')]
                                  ) {
                     sh 'az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID'                 
-                    sh 'chmod +x ./deploy/az-webapp-create-py.sh'
+                    sh 'chmod +x ./az-webapp-create-py.sh'
                     sh './az-webapp-create-py.sh -z . -b $BUILD_TAG'
                 }
             }
