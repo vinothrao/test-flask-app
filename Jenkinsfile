@@ -12,12 +12,7 @@ pipeline {
                 sh 'sudo apt-get install pip -y'
                 sh 'pip install -r requirements.txt'
             }
-        }
-        stage('Run flaskapp'){
-            steps{
-                sh 'python3 app.py'
-            }
-        }
+        }       
         stage('Deploy') {
             steps {
                 withCredentials([
